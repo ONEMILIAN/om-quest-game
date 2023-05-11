@@ -1,0 +1,30 @@
+body{
+    margin : 0px;
+    background-color : #333333;
+    color : #906030;
+    text-align : center;
+}
+#title{
+    font-size : 2cm;
+}
+#title_div{
+    background-color : #222;
+}
+#navigation_div{
+    font-size : 15px;
+    background-color : #444;
+}
+#custom_div{
+    font-size : 30px;
+    background-color : #444;
+}
+#canvas{
+    background-color : #222;
+    border : solid 6px #906030;
+}
+.btn{
+    background-color : #000;
+    color : #906030;
+    border : double 6px #906030;
+    border-radius : 3px;
+}

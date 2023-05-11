@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OM-Quest</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+  <body>
+    <div id="app">
+      <div id="navigation_div">
+	<input type="button" id="home_btn" class="btn" value="Home"/>
+	<input type="button" id="about_btn" class="btn" value="About"/>
+	<input type="button" id="help_btn" class="btn" value="Help"/>
+      </div>
+      <div id="title_div">
+	<h1 id="title">OM-Quest</h1>
+      </div>
+      <div id="custom_div">
+	<input id="start_btn" type="button" value="Start" class="btn" onclick="start()"/>
+	<input id="stop_btn" type="button" value="Stop" class="btn" onclick="stop()"/>
+	<input id="reset_btn" type="button" value="Reset" class="btn" onclick="reset()"/>
+      </div>
+      <div id="canvas_div">
+	<canvas id="canvas" width="1000" height="600"></canvas>
+      </div>
+    </div>
+    <script language="javascript" src="js/mainscript.js" type="text/javascript"></script>
+    </body>
+</html>
