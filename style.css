@@ -9,6 +9,7 @@ body{
 }
 #title_div{
     background-color : #222;
+    border : solid 3px #906030;
 }
 #navigation_div{
     font-size : 15px;

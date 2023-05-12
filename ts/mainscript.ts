@@ -5,23 +5,28 @@ let c:CanvasRenderingContext2D = CANVAS.getContext("2d") as CanvasRenderingConte
 //VARIABLES
 let on:number = 0;
 
+//CLASS INIT
+const grid = new Grid;
+let healthbar = new Healthbar;
+
 //FUNCTIONS
-function start(){
+function start():void{
     on = 1;
 }
-function stop(){
+function stop():void{
     on = 0;
 }
-function reset(){
+function reset():void{
     on = 0;
     c.clearRect(0, 0, CANVAS.width, CANVAS.height);
 }
 
 //MAIN BACKBONE
-(function main(){
+(function main():void{
     window.setInterval(()=>{
 	if(on == 1){
 	    c.clearRect(0, 0, CANVAS.width, CANVAS.height);
+	    healthbar.update();
 	}
     },500);
 }());
