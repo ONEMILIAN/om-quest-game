@@ -11,6 +11,7 @@ class Player{
     public exp;
     public max_exp;
     public strength;
+    public damage;
     public agility;
     public armor;
     private color;
@@ -28,6 +29,7 @@ class Player{
 	let exp:number = 0;
 	let max_exp:number = 200;
 	let strength:number = 1;
+	let damage:number = 25;
 	let agility:number = 1;
 	let armor:number = 0;
 	let color:string = "#906030";
@@ -44,6 +46,7 @@ class Player{
 	this.exp = exp;
 	this.max_exp = max_exp;
 	this.strength = strength;
+	this.damage = damage;
 	this.agility = agility;
 	this.armor = armor;
 	this.color = color;
@@ -58,19 +61,43 @@ class Player{
     direction_switch(direction:string){
 	switch(direction){
 	    case "w":{
+		attack.deattack();
 		this.y += -1 * grid.y;
 		break;
 	    }
 	    case "a":{
+		attack.deattack();
 		this.x += -1 * grid.x;
 		break;
 	    }
 	    case "s":{
+		attack.deattack();
 		this.y += 1 * grid.y;
 		break;
 	    }
 	    case "d":{
+		attack.deattack();
 		this.x += 1 * grid.x;
+		break;
+	    }
+	    case "i":{
+		attack.deattack();
+		attack.attack(attack.up, this.x, this.y - 1 * grid.y);
+		break;
+	    }
+	    case "k":{
+		attack.deattack();
+		attack.attack(attack.down, this.x, this.y + 1 * grid.y);
+		break;
+	    }
+	    case "l":{
+		attack.deattack();
+		attack.attack(attack.right, this.x + 1 * grid.x, this.y);
+		break;
+	    }
+	    case "j":{
+		attack.deattack();
+		attack.attack(attack.left, this.x - 1 * grid.x, this.y);
 		break;
 	    }
 	}

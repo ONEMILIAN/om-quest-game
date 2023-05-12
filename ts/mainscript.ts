@@ -10,6 +10,7 @@ const grid = new Grid;
 let healthbar = new Healthbar;
 let expbar = new Expbar;
 let player = new Player;
+let attack = new Attack;
 
 //FUNCTIONS
 function start():void{
@@ -29,10 +30,11 @@ function reset():void{
 	if(on == 1){
 	    c.clearRect(0, 0, CANVAS.width, CANVAS.height);
 	    player.update();
+	    attack.update();
 	    healthbar.update();
 	    expbar.update();
 	}
-    },500);
+    },100);
 }());
 
 window.addEventListener("keydown", ((e)=>{

@@ -6,4 +6,6 @@ It's work in progress at the moment and not functioning.
 
 * Moveable character with WASD
 
-* Healthbar
+* Health & experience-bar
+
+* Attack with IJKL
