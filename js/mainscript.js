@@ -7,6 +7,8 @@ let on = 0;
 //CLASS INIT
 const grid = new Grid;
 let healthbar = new Healthbar;
+let expbar = new Expbar;
+let player = new Player;
 //FUNCTIONS
 function start() {
     on = 1;
@@ -23,7 +25,13 @@ function reset() {
     window.setInterval(() => {
         if (on == 1) {
             c.clearRect(0, 0, CANVAS.width, CANVAS.height);
+            player.update();
             healthbar.update();
+            expbar.update();
         }
     }, 500);
 }());
+window.addEventListener("keydown", ((e) => {
+    const direction = e.key.replace("Arrow", "");
+    player.direction_switch(direction);
+}));
