@@ -23,6 +23,12 @@ body{
     background-color : #222;
     border : solid 6px #906030;
 }
+#stats_div{
+    display : none;
+}
+#settings_div{
+    display : none;
+}
 .btn{
     background-color : #000;
     color : #906030;

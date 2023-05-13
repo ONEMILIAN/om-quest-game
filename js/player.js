@@ -44,22 +44,27 @@ class Player {
     direction_switch(direction) {
         switch (direction) {
             case "w": {
+                attack.deattack();
                 this.y += -1 * grid.y;
                 break;
             }
             case "a": {
+                attack.deattack();
                 this.x += -1 * grid.x;
                 break;
             }
             case "s": {
+                attack.deattack();
                 this.y += 1 * grid.y;
                 break;
             }
             case "d": {
+                attack.deattack();
                 this.x += 1 * grid.x;
                 break;
             }
             case "i": {
+                attack.deattack();
                 attack.attack(attack.up, this.x, this.y - 1 * grid.y);
                 break;
             }
