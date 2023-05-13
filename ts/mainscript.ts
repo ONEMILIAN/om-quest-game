@@ -1,8 +1,12 @@
 //HTMLElements
-const CANVAS:HTMLCanvasElement = document.getElementById("canvas") as HTMLCanvasElement;
+let CANVAS:HTMLCanvasElement = document.getElementById("canvas") as HTMLCanvasElement;
 let c:CanvasRenderingContext2D = CANVAS.getContext("2d") as CanvasRenderingContext2D;
 let stats_div_doc:HTMLElement = document.getElementById("stats_div") as HTMLElement;
 let settings_div_doc:HTMLElement = document.getElementById("settings_div") as HTMLElement;
+let btn_class:HTMLCollection = document.getElementsByClassName("btn") as HTMLCollectionOf<HTMLElement>;
+let hex_color_input_id:HTMLInputElement = document.getElementById("hex_color_input") as HTMLInputElement;
+let title_div_id:HTMLElement = document.getElementById("title_div") as HTMLElement;
+let body:HTMLElement = document.body as HTMLElement;
 
 //VARIABLES
 let on:number = 0;
@@ -46,6 +50,19 @@ function settings():void{
 	settings_div_doc.style.display = "none";
 	show_settings = 0;
     }
+}
+
+function change_font_color():void{
+    for(let i:number = 0; i < btn_class.length; i++){
+	const one_btn = btn_class[i];
+	if(one_btn instanceof HTMLElement){
+	    one_btn.style.color = hex_color_input_id.value;
+	    one_btn.style.border = "double 6px " + hex_color_input_id.value;
+	}
+    }
+    body.style.color = hex_color_input_id.value;
+    CANVAS.style.border = "solid 3px " + hex_color_input_id.value;
+    title_div_id.style.border = "solid 3px " + hex_color_input_id.value;
 }
 
 //MAIN BACKBONE

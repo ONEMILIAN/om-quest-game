@@ -19,13 +19,10 @@
       </div>
       <div id="custom_div">
 	<input id="start_btn" type="button" value="Start" class="btn" onclick="start()"/>
-	<input id="stop_btn" type="button" value="Stop" class="btn" onclick="stop()"/>
+	<input id="stop_btn" type="button" value="Pause" class="btn" onclick="stop()"/>
 	<input id="reset_btn" type="button" value="Reset" class="btn" onclick="reset()"/>
 	<input id="stats_btn" type="button" value="Stats" class="btn" onclick="stats()"/>
 	<input id="settings_btn" type="button" value="Settings" class="btn" onclick="settings()"/>
-      </div>
-      <div id="canvas_div">
-	<canvas id="canvas" width="1000" height="600"></canvas>
       </div>
       <div id="stats_div">
 	<fieldset>
@@ -41,14 +38,21 @@
 	<fieldset>
 	  <legend>Graphics</legend>
 	  <h1>Character Sprite</h1>
+	  <input type="file" id="character_file" value="Choose.."/>
+	  <input type="button" id="character_submit" value="Change" class="btn"/>
 	  <h1>Attack Sprite</h1>
+	  <input type="file" id="attack_file" value="Choose.."/>
+	  <input type="button" id="attack_submit" value="Change" class="btn"/>
 	</fieldset>
 	<fieldset>
 	  <legend>Website</legend>
 	  <h1>Font Color</h1>
-	  <input type="text" value="font_color_hex"/>
-	  <input type="button" value="submit_font_color_hex" class="btn"/>
+	  <input id="hex_color_input" value="#906030" type="text" />
+	  <input id="hex_color_submit" type="button" name="Submit" value="Change Color" class="btn" onclick="change_font_color()"/>
 	</fieldset>
+      </div>
+      <div id="canvas_div">
+	<canvas id="canvas" width="1000" height="600"></canvas>
       </div>
     </div>
     <script language="javascript" src="js/grid.js" type="text/javascript"></script>
